@@ -10,6 +10,8 @@ class Node {
   }
 }
 
+app.use(express.static('public'));
+
 app.get('/', (req, res) => {
   const node = new Node(1, 'Hello World');
   res.send(node.value);
